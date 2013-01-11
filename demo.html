@@ -7,20 +7,37 @@
 	<script type="text/javascript" src="responsive-video.js"></script>
 	<link rel="stylesheet" type="text/css" href="responsive-video.css" />
 	<script type="text/javascript">
+		// Initialize the function
 		$(document).ready(function(){
-			$('.videoMe').responsivetd({
-				id: '125789',
-				type: 'vimeo'
+			$('.my_video').responsivetd({
+				id: '-O3gTUTsYbU',
+				type: 'youtube'
 			});
+			$('.default').responsivetd();
 		});
 	</script>
+	<style type="text/css">
+		/* Demo Styles */
+		body {
+			background: #333;
+			font-family: 'helvetica neue', helvetica, arial, sans-serif;
+			-webkit-font-smoothing: antialiased;
+		}
+		h2 {
+			color: #fff;
+			font-weight: 300;
+		}
+		.default, .my_video {
+			background: #4c4c4c;
+		}
+	</style>
 </head>
 <body>
-	
-	<div class='videoMe'>
+	<div class="default">
+		<h2>Default, No Parameters (defaults to one of my videos)</h2>
 	</div>
-	
-	<!-- <iframe src="http://player.vimeo.com/video/56733081" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> -->
-
+	<div class="my_video">
+		<h2>With Parameters Passed Through</h2>
+	</div>
 </body>
 </html>

@@ -9,7 +9,9 @@
 /* responsive video wrapper */
 .responsive-video {
 	position: relative;
-	padding-bottom: 20%; /* 4:3 ratio (standard) */
-	padding-bottom: 56.25%; /* 16:9 ratio */
+	padding-bottom: 56.25%; /* 16:9 */
 	height: 0;
+}
+.standardDef {
+	padding-bottom: 20%; /* 4:3 */
 }
