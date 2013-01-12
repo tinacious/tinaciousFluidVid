@@ -2,18 +2,20 @@
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8">
-	<title>Responsive Video</title>
+	<title>Tinacious Fluid Video jQuery Plugin for use in Responsive Web Design</title>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script type="text/javascript" src="tinaciousResponsiveVid.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="tinaciousResponsiveVid.css" />
+	<script type="text/javascript" src="tinaciousFluidVid.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="tinaciousFluidVid.css" />
 	<script type="text/javascript">
 		// Initialize the function
 		$(document).ready(function(){
-			$('.my_video').responsivetd({
-				id: '-O3gTUTsYbU',
-				type: 'youtube'
+			// First video without passing through any parameters
+			$('.default').tinaciousFluidVid();
+			// Second video specifying YouTube ID and type
+			$('.my_video').tinaciousFluidVid({
+				type: 'youtube',
+				id: '-O3gTUTsYbU'
 			});
-			$('.default').responsivetd();
 		});
 	</script>
 	<style type="text/css">
@@ -23,21 +25,32 @@
 			font-family: 'helvetica neue', helvetica, arial, sans-serif;
 			-webkit-font-smoothing: antialiased;
 		}
-		h2 {
+		h2, p {
 			color: #fff;
 			font-weight: 300;
+			text-shadow: 0 0 3px rgba(0,0,0,0.6);
+		}
+		p {
+			margin-bottom: 2em;
 		}
 		.default, .my_video {
 			background: #4c4c4c;
+			margin-bottom: 2em;
 		}
 	</style>
 </head>
 <body>
 	<div class="default">
-		<h2>Default, No Parameters (defaults to one of my videos)</h2>
+		<h2>Default, No Parameters</h2>
+		<p>
+			A video I created is a screencast on creating content for a Content Management Systems.
+		</p>
 	</div>
 	<div class="my_video">
 		<h2>With Parameters Passed Through</h2>
+		<p>
+			An older version of the same video on YouTube
+		</p>
 	</div>
 </body>
 </html>

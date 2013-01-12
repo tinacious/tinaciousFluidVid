@@ -9,7 +9,7 @@
 
 (function($){
 	$.fn.extend({
-		responsivetd: function(options) {
+		tinaciousFluidVid: function(options) {
 			var defaults = {
 				// Your Video's ID
 				id: '56733081',
