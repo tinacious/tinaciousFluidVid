@@ -111,3 +111,5 @@ Will render the following HTML"
 	</div>
 </div>
 ```
+
+![screenshot of the tinaciousFluidVid plugin demo](https://raw.github.com/tinacious/tinaciousFluidVid/master/screenshot.png)
