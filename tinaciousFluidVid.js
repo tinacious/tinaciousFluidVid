@@ -1,6 +1,6 @@
 /*
  *  Tinacious Responsive Video jQuery plugin
- *  Plugin URL: http://github.com/tinacious/responsive-video
+ *  Plugin URL: https://github.com/tinacious/tinaciousFluidVid
  *
  *  Christina Holly (Tinacious Design)
  *  http://tinaciousdesign.com
