@@ -105,7 +105,6 @@ Will render the following HTML"
 
 ```html
 <div class="my_video">
-	<h2>With Parameters Passed Through</h2>
 	<div class="responsive-video">
 		<iframe src="http://www.youtube.com/embed/-O3gTUTsYbU" frameborder="0" allowfullscreen=""></iframe>
 	</div>
