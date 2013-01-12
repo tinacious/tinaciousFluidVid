@@ -2,12 +2,8 @@
  *  Tinacious Responsive Video jQuery plugin
  *  Plugin URL: http://github.com/tinacious/responsive-video
  *
- *  Authored by Christina Holly (Tinacious Design)
+ *  Christina Holly (Tinacious Design)
  *  http://tinaciousdesign.com
- *
- *  Copyright 2013, Christina Holly
- *  License: GNU General Public License, version 3 (GPL-3.0)
- *  http://www.opensource.org/licenses/gpl-3.0.html
  *
  */
 
@@ -21,7 +17,7 @@
 				// Options: 'vimeo' (default), 'youtube'
 				type: 'vimeo',
 				// Aspect Ratio
-				// Options: 'widescreen' (default), 'standard'
+				// Options: 'widescreen' (default), 'standard' (still being tested)
 				ratio: 'widescreen'
 			}
 			var options = $.extend(defaults, options);
