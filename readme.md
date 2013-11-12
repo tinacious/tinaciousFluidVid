@@ -6,6 +6,8 @@ The CSS it uses was acquired from a variety of internet resources without luck o
 
 I made it easy to use. All you need to know is the video ID and whether it's a YouTube or Vimeo video.
 
+See the demo [here](http://tinacious.github.io/tinaciousFluidVid/).
+
 ## How it Works
 
 The plugin renders the HTML and the styles in the attached CSS file required to embed your fluid video.
