@@ -114,3 +114,5 @@ Will render the following HTML"
 ```
 
 ![screenshot of the tinaciousFluidVid plugin demo](https://raw.github.com/tinacious/tinaciousFluidVid/master/screenshot.png)
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tinacious/tinaciousfluidvid/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
