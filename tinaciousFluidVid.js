@@ -15,10 +15,7 @@
 				id: '56733081',
 				// Video Type
 				// Options: 'vimeo' (default), 'youtube'
-				type: 'vimeo',
-				// Aspect Ratio
-				// Options: 'widescreen' (default), 'standard' (still being tested)
-				ratio: 'widescreen'
+				type: 'vimeo'
 			}
 			var options = $.extend(defaults, options);
 			return this.each(function(){
@@ -31,8 +28,10 @@
 					var videoCode = youtubeCode;
 				}
 				var ratio = (defaults.ratio == 'standard') ? ' standardDef' : '';
-				obj.append('<div class="responsive-video' + ratio + '">' + videoCode + '</div>');
-			});
+				obj.append('<div class="responsive-video">' + videoCode + '</div>');
+				// append styles
+				$('head').append('<style type="text/css">.responsive-video iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%;} .responsive-video {position: relative; padding-bottom: 56.25%; height: 0;}</style>') });
 		}
 	});
 })(jQuery);
+
