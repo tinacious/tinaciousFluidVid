@@ -8,30 +8,29 @@
  */
 
 (function($){
-	$.fn.extend({
-		tinaciousFluidVid: function(options) {
-			var defaults = {
-				// Your Video's ID
-				id: '56733081',
-				// Video Type
-				// Options: 'vimeo' (default), 'youtube'
-				type: 'vimeo'
-			}
-			var options = $.extend(defaults, options);
-			return this.each(function(){
-				var obj = $(this);
-				var vimeoCode = '<iframe src="http://player.vimeo.com/video/' + defaults.id + '" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>';
-				var youtubeCode = '<iframe src="http://www.youtube.com/embed/' + defaults.id + '" frameborder="0" allowfullscreen></iframe>';
-				if(defaults.type == 'vimeo') {
-					var videoCode = vimeoCode;
-				} else if(defaults.type == 'youtube') {
-					var videoCode = youtubeCode;
-				}
-				var ratio = (defaults.ratio == 'standard') ? ' standardDef' : '';
-				obj.append('<div class="responsive-video">' + videoCode + '</div>');
-				// append styles
-				$('head').append('<style type="text/css">.responsive-video iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%;} .responsive-video {position: relative; padding-bottom: 56.25%; height: 0;}</style>') });
-		}
-	});
+  $.fn.extend({
+    tinaciousFluidVid: function(options) {
+      var defaults = {
+        // Your Video's ID
+        id: '56733081',
+        // Video Type
+        // Options: 'vimeo' (default), 'youtube'
+        type: 'vimeo'
+      }
+      var options = $.extend(defaults, options);
+      return this.each(function(){
+        var obj = $(this);
+        var vimeoCode = '<iframe src="http://player.vimeo.com/video/' + defaults.id + '" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>';
+        var youtubeCode = '<iframe src="http://www.youtube.com/embed/' + defaults.id + '" frameborder="0" allowfullscreen></iframe>';
+        if(defaults.type == 'vimeo') {
+          var videoCode = vimeoCode;
+        } else if(defaults.type == 'youtube') {
+          var videoCode = youtubeCode;
+        }
+        obj.append('<div class="responsive-video">' + videoCode + '</div>');
+        // append styles
+        $('head').append('<style type="text/css">.responsive-video iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%;} .responsive-video {position: relative; padding-bottom: 56.25%; height: 0;}</style>') });
+    }
+  });
 })(jQuery);
 
