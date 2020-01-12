@@ -1,93 +1,107 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="description" content="shrinkList jQuery plugin demo by Tinacious Design">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Tinacious Fluid Video jQuery plugin</title>
-		<script type="text/javascript" src="//use.typekit.net/fcj5mrj.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-		<link rel="stylesheet" type="text/css" href="https://gistcdn.githack.com/tinacious/d89f3daf0e4555a2dc23fd3beb14e179/raw/5bd576497143efb5c1374cc3a02fa7e9191bc678/plugin-styles.css">
-		<style>
-			/* demo theme styles */
-			.container {
-				max-width: 600px;
-			}
-			.site-header .logo {
-				width: 100%;
-			}
-			.logo span, .logo img {
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="shrinkList jQuery plugin demo by Tinacious Design">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tinacious Fluid Video jQuery plugin</title>
+	<script type="text/javascript" src="//use.typekit.net/fcj5mrj.js"></script>
+	<script type="text/javascript">
+		try {
+			Typekit.load();
+		} catch (e) {}
+
+	</script>
+	<link rel="stylesheet" type="text/css"
+		href="https://gistcdn.githack.com/tinacious/d89f3daf0e4555a2dc23fd3beb14e179/raw/5bd576497143efb5c1374cc3a02fa7e9191bc678/plugin-styles.css">
+	<style>
+		/* demo theme styles */
+		.container {
+			max-width: 600px;
+		}
+
+		.site-header .logo {
+			width: 100%;
+		}
+
+		.logo span,
+		.logo img {
+			display: block;
+			float: left;
+		}
+
+		.logo span {
+			padding: 10px 0 0 10px;
+		}
+
+		.site-header {
+			padding: 5px 0;
+			z-index: 9999;
+		}
+
+		@media (max-width: 767px) {
+			.site-header .logo span {
 				display: block;
-				float: left;
 			}
-			.logo span {
-				padding: 10px 0 0 10px;
-			}
-			.site-header {
-				padding: 5px 0;
-				z-index: 9999;
-			}
-			@media (max-width: 767px) {
-				.site-header .logo span {
-					display: block;
-				}
-			}
+		}
 
-			/* demo styles */
-			.default, .my_video {
-				margin-bottom: 40px;
-			}
-		</style>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		/* demo styles */
+		.embedded-video {
+			margin-bottom: 60px;
+		}
 
-		<script src="tinaciousFluidVid.min.js"></script>
-		<script>
-			$(document).ready(function(){
-				// First video without passing through any parameters
-				$('.default').tinaciousFluidVid();
-				// Second video specifying YouTube ID and type
-				$('.my_video').tinaciousFluidVid({
-					type: 'youtube',
-					id: 'zA3nm6vXWOE'
-				});
-			})
-		</script>
-	</head>
-	<body>
-		<header class="site-header">
-			<div class="container">
-				<div class="logo">
-					<img src="http://tinaciousdesign.com/images/td-logo.png" alt="Tinacious Design logo" width="50">
-					<span><b><a href="http://tinaciousdesign.com">Tinacious Design</a></b> &ndash; plugin demos</span>
-				</div>
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+	<script src="tinaciousFluidVid.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#youtube').tinaciousFluidVid({
+				type: 'youtube',
+				id: 'zA3nm6vXWOE'
+			});
+
+			$('#vimeo').tinaciousFluidVid({
+				type: 'vimeo',
+				id: '56733081'
+			});
+		})
+
+	</script>
+</head>
+
+<body>
+	<header class="site-header">
+		<div class="container">
+			<div class="logo">
+				<img src="http://tinaciousdesign.com/images/td-logo.png" alt="Tinacious Design logo" width="50">
+				<span><b><a href="/">Tinacious Design</a></b> &ndash; plugin demos</span>
 			</div>
-		</header>
+		</div>
+	</header>
 
-		<section class="site-content">
-			<div class="container">
-				<h1>Tinacious Fluid Video jQuery plugin</h1>
+	<section class="site-content">
+		<div class="container">
+			<h1>Tinacious Fluid Video jQuery plugin</h1>
 
-				<p>
-					This plugin is for use in Fliud Responsive Design.
-				</p>
+			<p>
+				This plugin is for use in Fliud Responsive Design.
+			</p>
 
-				<div class="default">
-					<h2>Default, No Parameters</h2>
-					<p>
-						The default video features a screencast on the ease of adding a portfolio item to a CMS-powered portfolio website I developed.
-					</p>
-				</div>
-				<div class="my_video">
-					<h2>With Parameters Passed Through</h2>
-					<p>
-						A different video. This one is a front-end prototype I developed for a Startup Weekend Toronto project.
-					</p>
-				</div>
+			<h2>YouTube</h2>
 
-				<p>
-					<a href="http://github.com/tinacious/tinaciousFluidVid" class="btn">Download on Github</a>
-				</p>
-			</div>
-		</section>
-	</body>
+			<div class="embedded-video" id="youtube"></div>
+
+			<h2>Vimeo</h2>
+
+			<div class="embedded-video" id="vimeo"></div>
+
+			<p>
+				<a href="http://github.com/tinacious/tinaciousFluidVid" class="btn">Download on Github</a>
+			</p>
+		</div>
+	</section>
+</body>
+
 </html>
