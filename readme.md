@@ -39,10 +39,10 @@ Initialize your script on document ready:
 
 ```js
 $(document).ready(function(){
-	$('.my_video').tinaciousFluidVid({
-		id: '', // Video ID goes here
-		type: 'vimeo', // Video service name goes here. Currently supports YouTube and Vimeo (default: vimeo)
-	});
+  $('.my_video').tinaciousFluidVid({
+    id: '', // Video ID goes here
+    type: 'vimeo', // Video service name goes here. Currently supports YouTube and Vimeo (default: vimeo)
+  });
 });
 ```
 
@@ -52,9 +52,9 @@ Since Vimeo is the default video service, you do not need to specify that the ty
 
 ```js
 $(document).ready(function(){
-	$('.my_video').tinaciousFluidVid({
-		id: '123456'
-	});
+  $('.my_video').tinaciousFluidVid({
+    id: '123456'
+  });
 });
 ```
 It will play video with ID 123456 on Vimeo.
@@ -65,10 +65,10 @@ Using this jQuery:
 
 ```js
 $(document).ready(function(){
-	$('.my_video').tinaciousFluidVid({
-		type: 'youtube',
-		id: '-O3gTUTsYbU'
-	});
+  $('.my_video').tinaciousFluidVid({
+    type: 'youtube',
+    id: '-O3gTUTsYbU'
+  });
 });
 ```
 
@@ -76,10 +76,8 @@ Will render the following HTML"
 
 ```html
 <div class="my_video">
-	<div class="responsive-video">
-		<iframe src="http://www.youtube.com/embed/-O3gTUTsYbU" frameborder="0" allowfullscreen=""></iframe>
-	</div>
+  <div class="responsive-video">
+    <iframe src="http://www.youtube.com/embed/-O3gTUTsYbU" frameborder="0" allowfullscreen=""></iframe>
+  </div>
 </div>
 ```
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tinacious/tinaciousfluidvid/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
