@@ -2,7 +2,7 @@
  *  Tinacious Responsive Video jQuery plugin
  *  Plugin URL: https://github.com/tinacious/tinaciousFluidVid
  *
- *  Christina Holly (Tinacious Design)
+ *  Tina Holly (Tinacious Design)
  *  http://tinaciousdesign.com
  *
  */
@@ -12,16 +12,18 @@
     tinaciousFluidVid: function(options) {
       var defaults = {
         // Your Video's ID
-        id: '56733081',
+        id: undefined,
+
         // Video Type
         // Options: 'vimeo' (default), 'youtube'
         type: 'vimeo'
-      }
+      };
+
       var options = $.extend(defaults, options);
       return this.each(function(){
         var obj = $(this);
-        var vimeoCode = '<iframe src="http://player.vimeo.com/video/' + defaults.id + '" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>';
-        var youtubeCode = '<iframe src="http://www.youtube.com/embed/' + defaults.id + '" frameborder="0" allowfullscreen></iframe>';
+        var vimeoCode = '<iframe src="https://player.vimeo.com/video/' + defaults.id + '" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>';
+        var youtubeCode = '<iframe src="https://www.youtube.com/embed/' + defaults.id + '" frameborder="0" allowfullscreen></iframe>';
         if(defaults.type == 'vimeo') {
           var videoCode = vimeoCode;
         } else if(defaults.type == 'youtube') {
